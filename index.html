@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CleanHealth Waste Women's Cooperative - Empowering women through professional healthcare waste management in Uganda. Creating sustainable employment while protecting public health and the environment.">
+    <meta name="keywords" content="healthcare waste management, women empowerment, Uganda, cooperative, circular economy, sustainability, NEMA compliance">
+    <meta name="author" content="CleanHealth Waste Women's Cooperative">
+    <meta name="theme-color" content="#1a5f7a">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="CleanHealth Waste Women's Cooperative">
+    <meta property="og:description" content="Empowering women through healthcare waste management in Uganda">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/images/og-image.png">
+
+    <title>CleanHealth Waste Women's Cooperative | Healthcare Waste Management Uganda</title>
+
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- External Libraries -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.10.0/dist/tf.min.js"></script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+    <!-- Skip Navigation for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Loading Screen -->
+    <div id="loader" class="loader" aria-hidden="true">
+        <div class="loader-content">
+            <div class="loader-icon">
+                <svg viewBox="0 0 100 100" class="loader-svg">
+                    <circle cx="50" cy="50" r="45" class="loader-circle"></circle>
+                    <path d="M50 20 L50 50 L70 70" class="loader-checkmark"></path>
+                </svg>
+            </div>
+            <p class="loader-text">Loading CleanHealth...</p>
+        </div>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header class="header" id="header">
+        <nav class="nav container" aria-label="Main navigation">
+            <a href="#" class="nav-logo" aria-label="CleanHealth Home">
+                <svg class="logo-icon" viewBox="0 0 50 50" aria-hidden="true">
+                    <circle cx="25" cy="25" r="23" fill="none" stroke="currentColor" stroke-width="2"/>
+                    <path d="M15 25 L22 32 L35 18" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="25" cy="25" r="8" fill="currentColor" opacity="0.2"/>
+                </svg>
+                <span class="logo-text">CleanHealth</span>
+            </a>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#problem" class="nav-link">The Crisis</a></li>
+                <li class="nav-item"><a href="#solution" class="nav-link">Our Solution</a></li>
+                <li class="nav-item"><a href="#impact" class="nav-link">Impact</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="#team" class="nav-link">Team</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link nav-link--cta">Get Started</a></li>
+            </ul>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-background">
+                <div class="hero-particles" id="hero-particles"></div>
+                <div class="hero-gradient"></div>
+            </div>
+
+            <div class="hero-content container">
+                <div class="hero-text">
+                    <span class="hero-badge animate-fade-up">Women-Led Social Enterprise</span>
+                    <h1 class="hero-title animate-fade-up">
+                        Transforming Healthcare Waste into
+                        <span class="text-gradient">Women's Empowerment</span>
+                    </h1>
+                    <p class="hero-description animate-fade-up">
+                        Uganda's first women-owned cooperative solving the healthcare waste crisis
+                        through professional, community-based solutions that protect public health
+                        and create sustainable employment.
+                    </p>
+                    <div class="hero-cta animate-fade-up">
+                        <a href="#contact" class="btn btn-primary">
+                            <span>Partner With Us</span>
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                        <a href="#impact" class="btn btn-secondary">
+                            <span>See Our Impact</span>
+                        </a>
+                    </div>
+
+                    <!-- Quick Stats -->
+                    <div class="hero-stats animate-fade-up">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="15">0</span>
+                            <span class="stat-label">Women Employed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="180">0</span>
+                            <span class="stat-suffix">+</span>
+                            <span class="stat-label">Tonnes Diverted/Year</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="25">0</span>
+                            <span class="stat-label">Healthcare Facilities</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual animate-fade-left">
+                    <div class="hero-illustration" id="hero-illustration">
+                        <!-- D3.js animated illustration will be inserted here -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-scroll">
+                <a href="#about" class="scroll-indicator" aria-label="Scroll to learn more">
+                    <span class="scroll-text">Scroll to explore</span>
+                    <div class="scroll-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14M5 12l7 7 7-7"/>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section about" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Who We Are</span>
+                    <h2 class="section-title">Empowering Women Through Environmental Action</h2>
+                    <p class="section-description">
+                        CleanHealth Waste Women's Cooperative creates dignified employment while solving
+                        Uganda's healthcare waste management crisis.
+                    </p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-content">
+                        <div class="about-card mission-card">
+                            <div class="card-icon">
+                                <svg viewBox="0 0 48 48" fill="none">
+                                    <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M24 14v10l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <h3>Our Mission</h3>
+                            <p>To empower women through dignified employment in environmental services while solving Uganda's healthcare waste management crisis through professional, community-based solutions that protect public health and the environment.</p>
+                        </div>
+
+                        <div class="about-card vision-card">
+                            <div class="card-icon">
+                                <svg viewBox="0 0 48 48" fill="none">
+                                    <circle cx="24" cy="24" r="8" stroke="currentColor" stroke-width="2"/>
+                                    <circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/>
+                                    <path d="M24 4v8M24 36v8M4 24h8M36 24h8" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <h3>Our Vision</h3>
+                            <p>To become Uganda's leading women-owned healthcare waste management cooperative, setting the standard for community-based circular economy solutions across East Africa.</p>
+                        </div>
+                    </div>
+
+                    <div class="about-values">
+                        <h3 class="values-title">Our Core Values</h3>
+                        <div class="values-list">
+                            <div class="value-item">
+                                <div class="value-icon safety">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                        <path d="M9 12l2 2 4-4"/>
+                                    </svg>
+                                </div>
+                                <div class="value-content">
+                                    <h4>Safety First</h4>
+                                    <p>Rigorous adherence to biohazard protocols and worker protection</p>
+                                </div>
+                            </div>
+
+                            <div class="value-item">
+                                <div class="value-icon empowerment">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="8" r="4"/>
+                                        <path d="M16 21v-2a4 4 0 00-8 0v2"/>
+                                        <path d="M12 11v4M10 13h4"/>
+                                    </svg>
+                                </div>
+                                <div class="value-content">
+                                    <h4>Women's Empowerment</h4>
+                                    <p>Creating dignified, sustainable employment for women</p>
+                                </div>
+                            </div>
+
+                            <div class="value-item">
+                                <div class="value-icon environment">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+                                        <path d="M2 12h20"/>
+                                    </svg>
+                                </div>
+                                <div class="value-content">
+                                    <h4>Environmental Stewardship</h4>
+                                    <p>Protecting communities and ecosystems through proper waste management</p>
+                                </div>
+                            </div>
+
+                            <div class="value-item">
+                                <div class="value-icon excellence">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                                    </svg>
+                                </div>
+                                <div class="value-content">
+                                    <h4>Professional Excellence</h4>
+                                    <p>Delivering reliable, high-quality services exceeding regulatory standards</p>
+                                </div>
+                            </div>
+
+                            <div class="value-item">
+                                <div class="value-icon community">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                                        <circle cx="9" cy="7" r="4"/>
+                                        <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+                                    </svg>
+                                </div>
+                                <div class="value-content">
+                                    <h4>Community Impact</h4>
+                                    <p>Reinvesting in member development and community health education</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Section -->
+        <section class="section problem" id="problem">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">The Challenge</span>
+                    <h2 class="section-title">Uganda's Healthcare Waste Crisis</h2>
+                    <p class="section-description">
+                        A critical environmental and public health emergency requiring immediate,
+                        professional intervention.
+                    </p>
+                </div>
+
+                <div class="problem-visualization">
+                    <div class="crisis-stats">
+                        <div class="crisis-stat">
+                            <div class="crisis-number">
+                                <span data-count="7000">0</span>+
+                            </div>
+                            <div class="crisis-label">Private Clinics in Uganda</div>
+                            <div class="crisis-detail">Generating waste daily without proper management</div>
+                        </div>
+
+                        <div class="crisis-stat">
+                            <div class="crisis-number">
+                                <span data-count="6">0</span>%
+                            </div>
+                            <div class="crisis-label">Compliance Rate</div>
+                            <div class="crisis-detail">Only 6% of facilities meet NEMA waste segregation requirements</div>
+                        </div>
+
+                        <div class="crisis-stat">
+                            <div class="crisis-number">
+                                <span data-count="92">0</span>kg
+                            </div>
+                            <div class="crisis-label">Daily Waste per Facility</div>
+                            <div class="crisis-detail">Healthcare facilities generate 20-92 kg of waste daily</div>
+                        </div>
+
+                        <div class="crisis-stat">
+                            <div class="crisis-number">
+                                <span data-count="85">0</span>%
+                            </div>
+                            <div class="crisis-label">Non-Hazardous Waste</div>
+                            <div class="crisis-detail">Routinely mixed with infectious materials</div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive D3 Visualization -->
+                    <div class="problem-chart-container">
+                        <h3 class="chart-title">Three-Fold Impact of Improper Waste Management</h3>
+                        <div id="problem-chart" class="chart-area" role="img" aria-label="Interactive chart showing environmental, economic, and regulatory impacts"></div>
+                    </div>
+                </div>
+
+                <div class="impact-cards">
+                    <div class="impact-card environmental">
+                        <div class="impact-icon">
+                            <svg viewBox="0 0 48 48" fill="none">
+                                <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2"/>
+                                <path d="M24 14c-6 0-10 4-10 10s4 10 10 10" stroke="currentColor" stroke-width="2"/>
+                                <path d="M24 14v20" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="24" cy="24" r="4" fill="currentColor" opacity="0.3"/>
+                            </svg>
+                        </div>
+                        <h3>Environmental Impact</h3>
+                        <ul>
+                            <li>Medical waste contaminates landfills (especially Kiteezi)</li>
+                            <li>Groundwater and soil contamination</li>
+                            <li>Air quality degradation from informal burning</li>
+                        </ul>
+                    </div>
+
+                    <div class="impact-card economic">
+                        <div class="impact-icon">
+                            <svg viewBox="0 0 48 48" fill="none">
+                                <rect x="8" y="20" width="8" height="20" rx="1" stroke="currentColor" stroke-width="2"/>
+                                <rect x="20" y="12" width="8" height="28" rx="1" stroke="currentColor" stroke-width="2"/>
+                                <rect x="32" y="8" width="8" height="32" rx="1" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>Economic Impact</h3>
+                        <ul>
+                            <li>Millions of shillings in valuable recyclables lost</li>
+                            <li>Paper, cardboard, plastics buried instead of recovered</li>
+                            <li>Missed circular economy opportunities</li>
+                        </ul>
+                    </div>
+
+                    <div class="impact-card regulatory">
+                        <div class="impact-icon">
+                            <svg viewBox="0 0 48 48" fill="none">
+                                <path d="M24 4L4 14v20l20 10 20-10V14L24 4z" stroke="currentColor" stroke-width="2"/>
+                                <path d="M4 14l20 10 20-10" stroke="currentColor" stroke-width="2"/>
+                                <path d="M24 24v20" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>Regulatory Impact</h3>
+                        <ul>
+                            <li>NEMA enforcement increasing pressure on facilities</li>
+                            <li>Urgent demand for compliance solutions</li>
+                            <li>Most facilities lack expertise to comply</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution Section -->
+        <section class="section solution" id="solution">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Our Approach</span>
+                    <h2 class="section-title">Professional, Community-Based Solutions</h2>
+                    <p class="section-description">
+                        A women's cooperative providing healthcare waste sorting, non-hazardous collection,
+                        and recycling linkage services.
+                    </p>
+                </div>
+
+                <!-- Process Steps -->
+                <div class="solution-process">
+                    <div class="process-line"></div>
+
+                    <div class="process-step" data-step="1">
+                        <div class="step-number">01</div>
+                        <div class="step-content">
+                            <h3>Partnership Development</h3>
+                            <p>Monthly service contracts with healthcare facilities as compliance partners. We work alongside you, not just for you.</p>
+                            <div class="step-icon">
+                                <svg viewBox="0 0 48 48" fill="none">
+                                    <path d="M16 28l-4 4 4 4M32 20l4-4-4-4M26 12l-4 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="process-step" data-step="2">
+                        <div class="step-number">02</div>
+                        <div class="step-content">
+                            <h3>Staff Training</h3>
+                            <p>Our founder, a Medical Laboratory Technologist, delivers comprehensive waste segregation training to facility staff.</p>
+                            <div class="step-icon">
+                                <svg viewBox="0 0 48 48" fill="none">
+                                    <circle cx="24" cy="16" r="8" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M12 40v-4a12 12 0 0124 0v4" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M24 24v8M20 28h8" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="process-step" data-step="3">
+                        <div class="step-number">03</div>
+                        <div class="step-content">
+                            <h3>Collection Services</h3>
+                            <p>Trained cooperative members conduct scheduled pickups of properly segregated non-hazardous waste with full safety protocols.</p>
+                            <div class="step-icon">
+                                <svg viewBox="0 0 48 48" fill="none">
+                                    <rect x="8" y="20" width="32" height="20" rx="2" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M16 20v-8a8 8 0 0116 0v8" stroke="currentColor" stroke-width="2"/>
+                                    <circle cx="24" cy="30" r="4" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="process-step" data-step="4">
+                        <div class="step-number">04</div>
+                        <div class="step-content">
+                            <h3>Recycling Linkage</h3>
+                            <p>Materials sorted and sold to established recycling partners, completing the circular economy loop.</p>
+                            <div class="step-icon">
+                                <svg viewBox="0 0 48 48" fill="none">
+                                    <path d="M24 8l8 8-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M32 16H20a8 8 0 00-8 8v8" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M24 40l-8-8 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M16 32h12a8 8 0 008-8v-8" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Differentiators -->
+                <div class="differentiators">
+                    <h3 class="diff-title">What Makes Us Different</h3>
+                    <div class="diff-grid">
+                        <div class="diff-item">
+                            <div class="diff-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                                </svg>
+                            </div>
+                            <h4>Expert Medical Leadership</h4>
+                            <p>Founded by a Medical Laboratory Technologist with deep knowledge of healthcare waste streams</p>
+                        </div>
+
+                        <div class="diff-item">
+                            <div class="diff-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                </svg>
+                            </div>
+                            <h4>Non-Hazardous Focus</h4>
+                            <p>Specialized in low-risk, high-value materials that make up 85% of healthcare waste</p>
+                        </div>
+
+                        <div class="diff-item">
+                            <div class="diff-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                    <path d="M9 12l2 2 4-4"/>
+                                </svg>
+                            </div>
+                            <h4>Compliance Partnership</h4>
+                            <p>Positioned as regulatory compliance partners, not just waste collectors</p>
+                        </div>
+
+                        <div class="diff-item">
+                            <div class="diff-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="8" r="5"/>
+                                    <path d="M20 21a8 8 0 10-16 0"/>
+                                </svg>
+                            </div>
+                            <h4>Women's Cooperative</h4>
+                            <p>Democratic governance with transparent financial reporting and equitable profit-sharing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Section with D3 Visualizations -->
+        <section class="section impact" id="impact">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Our Impact</span>
+                    <h2 class="section-title">Measurable Change, Real Results</h2>
+                    <p class="section-description">
+                        Track our progress toward creating lasting environmental and social impact in Uganda.
+                    </p>
+                </div>
+
+                <!-- Impact Dashboard -->
+                <div class="impact-dashboard">
+                    <!-- Financial Projections Chart -->
+                    <div class="dashboard-card financial-card">
+                        <div class="card-header">
+                            <h3>3-Year Financial Projections</h3>
+                            <div class="chart-legend" id="financial-legend"></div>
+                        </div>
+                        <div id="financial-chart" class="chart-container" role="img" aria-label="Financial projections chart showing revenue and profit growth over 3 years"></div>
+                        <div class="chart-summary">
+                            <div class="summary-item">
+                                <span class="summary-value">288%</span>
+                                <span class="summary-label">Cumulative ROI</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-value">52%</span>
+                                <span class="summary-label">Year 3 Margin</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-value">Month 5</span>
+                                <span class="summary-label">Break-even</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Revenue Breakdown -->
+                    <div class="dashboard-card revenue-card">
+                        <div class="card-header">
+                            <h3>Revenue Streams</h3>
+                        </div>
+                        <div id="revenue-chart" class="chart-container" role="img" aria-label="Pie chart showing revenue stream breakdown"></div>
+                    </div>
+
+                    <!-- Impact Metrics -->
+                    <div class="dashboard-card metrics-card">
+                        <div class="card-header">
+                            <h3>Year 3 Impact Targets</h3>
+                        </div>
+                        <div class="metrics-grid">
+                            <div class="metric-item">
+                                <div class="metric-progress" data-progress="100">
+                                    <svg viewBox="0 0 100 100">
+                                        <circle class="metric-bg" cx="50" cy="50" r="45"/>
+                                        <circle class="metric-fill women" cx="50" cy="50" r="45"/>
+                                    </svg>
+                                    <div class="metric-value">15</div>
+                                </div>
+                                <span class="metric-label">Women Employed</span>
+                            </div>
+
+                            <div class="metric-item">
+                                <div class="metric-progress" data-progress="72">
+                                    <svg viewBox="0 0 100 100">
+                                        <circle class="metric-bg" cx="50" cy="50" r="45"/>
+                                        <circle class="metric-fill compliance" cx="50" cy="50" r="45"/>
+                                    </svg>
+                                    <div class="metric-value">72%</div>
+                                </div>
+                                <span class="metric-label">Compliance Rate</span>
+                            </div>
+
+                            <div class="metric-item">
+                                <div class="metric-progress" data-progress="85">
+                                    <svg viewBox="0 0 100 100">
+                                        <circle class="metric-bg" cx="50" cy="50" r="45"/>
+                                        <circle class="metric-fill waste" cx="50" cy="50" r="45"/>
+                                    </svg>
+                                    <div class="metric-value">180+</div>
+                                </div>
+                                <span class="metric-label">Tonnes Diverted</span>
+                            </div>
+
+                            <div class="metric-item">
+                                <div class="metric-progress" data-progress="100">
+                                    <svg viewBox="0 0 100 100">
+                                        <circle class="metric-bg" cx="50" cy="50" r="45"/>
+                                        <circle class="metric-fill training" cx="50" cy="50" r="45"/>
+                                    </svg>
+                                    <div class="metric-value">200+</div>
+                                </div>
+                                <span class="metric-label">Workers Trained</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Growth Timeline -->
+                    <div class="dashboard-card timeline-card">
+                        <div class="card-header">
+                            <h3>Growth Roadmap</h3>
+                        </div>
+                        <div id="timeline-chart" class="chart-container" role="img" aria-label="Timeline showing growth milestones"></div>
+                    </div>
+                </div>
+
+                <!-- Waste Classification Demo (TensorFlow.js) -->
+                <div class="ml-demo">
+                    <div class="demo-header">
+                        <h3>AI-Powered Waste Classification Demo</h3>
+                        <p>Experience our training methodology through this interactive demonstration powered by machine learning.</p>
+                    </div>
+                    <div class="demo-container">
+                        <div class="demo-input">
+                            <div class="upload-area" id="upload-area">
+                                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M24 32V16M16 24l8-8 8 8"/>
+                                    <rect x="8" y="8" width="32" height="32" rx="4"/>
+                                </svg>
+                                <p>Drag & drop an image or click to upload</p>
+                                <span class="upload-hint">Supports: JPG, PNG (max 5MB)</span>
+                            </div>
+                            <input type="file" id="image-input" accept="image/*" class="visually-hidden">
+                            <div class="sample-images">
+                                <p>Or try with sample images:</p>
+                                <div class="sample-grid">
+                                    <button class="sample-btn" data-type="paper" aria-label="Test with paper waste">
+                                        <span class="sample-icon">📄</span>
+                                        <span>Paper</span>
+                                    </button>
+                                    <button class="sample-btn" data-type="plastic" aria-label="Test with plastic waste">
+                                        <span class="sample-icon">🧴</span>
+                                        <span>Plastic</span>
+                                    </button>
+                                    <button class="sample-btn" data-type="cardboard" aria-label="Test with cardboard waste">
+                                        <span class="sample-icon">📦</span>
+                                        <span>Cardboard</span>
+                                    </button>
+                                    <button class="sample-btn" data-type="hazardous" aria-label="Test with hazardous waste">
+                                        <span class="sample-icon">⚠️</span>
+                                        <span>Hazardous</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-output">
+                            <div class="output-preview" id="output-preview">
+                                <div class="preview-placeholder">
+                                    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <rect x="8" y="8" width="32" height="32" rx="4"/>
+                                        <circle cx="18" cy="20" r="4"/>
+                                        <path d="M8 36l10-10 6 6 8-8 8 8"/>
+                                    </svg>
+                                    <span>Classification results will appear here</span>
+                                </div>
+                            </div>
+                            <div class="output-results" id="output-results">
+                                <div class="result-category">
+                                    <span class="category-name">Category</span>
+                                    <span class="category-value">--</span>
+                                </div>
+                                <div class="result-confidence">
+                                    <span class="confidence-label">Confidence</span>
+                                    <div class="confidence-bar">
+                                        <div class="confidence-fill" style="width: 0%"></div>
+                                    </div>
+                                    <span class="confidence-value">--%</span>
+                                </div>
+                                <div class="result-action">
+                                    <span class="action-label">Recommended Action</span>
+                                    <span class="action-value">--</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="section services" id="services">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">What We Offer</span>
+                    <h2 class="section-title">Comprehensive Waste Management Services</h2>
+                    <p class="section-description">
+                        Professional solutions tailored to healthcare facilities of all sizes.
+                    </p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 64 64" fill="none">
+                                <rect x="12" y="24" width="40" height="32" rx="4" stroke="currentColor" stroke-width="2"/>
+                                <path d="M20 24v-8a12 12 0 0124 0v8" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="32" cy="40" r="6" stroke="currentColor" stroke-width="2"/>
+                                <path d="M32 44v4" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>Facility Service Contracts</h3>
+                        <p>Monthly waste collection and management services customized to your facility's needs.</p>
+                        <div class="service-pricing">
+                            <div class="price-tier">
+                                <span class="tier-name">Small Clinics</span>
+                                <span class="tier-price">UGX 200,000/mo</span>
+                            </div>
+                            <div class="price-tier">
+                                <span class="tier-name">Medium Facilities</span>
+                                <span class="tier-price">UGX 350,000/mo</span>
+                            </div>
+                            <div class="price-tier">
+                                <span class="tier-name">Health Centers</span>
+                                <span class="tier-price">UGX 500,000/mo</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="service-cta">Get Quote</a>
+                    </div>
+
+                    <div class="service-card featured">
+                        <div class="featured-badge">Most Popular</div>
+                        <div class="service-icon">
+                            <svg viewBox="0 0 64 64" fill="none">
+                                <circle cx="32" cy="20" r="12" stroke="currentColor" stroke-width="2"/>
+                                <path d="M16 56v-8a16 16 0 0132 0v8" stroke="currentColor" stroke-width="2"/>
+                                <path d="M32 32v12M26 38h12" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>Training Programs</h3>
+                        <p>Expert-led waste segregation training delivered by our Medical Laboratory Technologist founder.</p>
+                        <div class="service-pricing">
+                            <div class="price-tier">
+                                <span class="tier-name">Group Training</span>
+                                <span class="tier-price">UGX 500,000/facility</span>
+                            </div>
+                            <div class="price-tier">
+                                <span class="tier-name">Individual Certification</span>
+                                <span class="tier-price">UGX 75,000/person</span>
+                            </div>
+                            <div class="price-tier">
+                                <span class="tier-name">Annual Refresher</span>
+                                <span class="tier-price">UGX 250,000/facility</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="service-cta">Book Training</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 64 64" fill="none">
+                                <path d="M32 8l12 12-12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M44 20H28a12 12 0 00-12 12v12" stroke="currentColor" stroke-width="2"/>
+                                <path d="M32 56l-12-12 12-12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M20 44h16a12 12 0 0012-12V20" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>Recycling Linkage</h3>
+                        <p>Connect your sorted materials with established recycling partners for maximum resource recovery.</p>
+                        <div class="service-features">
+                            <div class="feature-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 12l2 2 4-4"/>
+                                    <circle cx="12" cy="12" r="10"/>
+                                </svg>
+                                <span>Paper & Cardboard Recovery</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 12l2 2 4-4"/>
+                                    <circle cx="12" cy="12" r="10"/>
+                                </svg>
+                                <span>Plastic Sorting & Sale</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 12l2 2 4-4"/>
+                                    <circle cx="12" cy="12" r="10"/>
+                                </svg>
+                                <span>Revenue Sharing Available</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="service-cta">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Daily Operations -->
+                <div class="operations-section">
+                    <h3 class="operations-title">Our Daily Operations</h3>
+                    <div class="operations-timeline">
+                        <div class="op-item">
+                            <div class="op-time">6:00 AM</div>
+                            <div class="op-content">
+                                <h4>Team Assembly</h4>
+                                <p>Equipment check, route planning, safety briefing</p>
+                            </div>
+                        </div>
+                        <div class="op-item">
+                            <div class="op-time">7:00 AM</div>
+                            <div class="op-content">
+                                <h4>Morning Collection</h4>
+                                <p>Collection rounds begin at partner facilities</p>
+                            </div>
+                        </div>
+                        <div class="op-item">
+                            <div class="op-time">12:00 PM</div>
+                            <div class="op-content">
+                                <h4>Midday Processing</h4>
+                                <p>Material drop-off and initial sorting</p>
+                            </div>
+                        </div>
+                        <div class="op-item">
+                            <div class="op-time">1:00 PM</div>
+                            <div class="op-content">
+                                <h4>Afternoon Collection</h4>
+                                <p>Second round of facility visits</p>
+                            </div>
+                        </div>
+                        <div class="op-item">
+                            <div class="op-time">4:00 PM</div>
+                            <div class="op-content">
+                                <h4>Final Processing</h4>
+                                <p>Final sorting, documentation, equipment cleaning</p>
+                            </div>
+                        </div>
+                        <div class="op-item">
+                            <div class="op-time">5:00 PM</div>
+                            <div class="op-content">
+                                <h4>Day Complete</h4>
+                                <p>Report filing, next-day preparation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="section team" id="team">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Leadership</span>
+                    <h2 class="section-title">Meet Our Founder</h2>
+                    <p class="section-description">
+                        Expert leadership combining medical knowledge with social entrepreneurship.
+                    </p>
+                </div>
+
+                <div class="team-content">
+                    <div class="founder-card">
+                        <div class="founder-image">
+                            <div class="image-placeholder">
+                                <svg viewBox="0 0 120 120" fill="none">
+                                    <circle cx="60" cy="45" r="25" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M20 110v-10a40 40 0 0180 0v10" stroke="currentColor" stroke-width="2"/>
+                                    <circle cx="60" cy="60" r="55" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="founder-info">
+                            <h3 class="founder-name">Samura Boona</h3>
+                            <span class="founder-title">Founder & Lead Trainer</span>
+                            <span class="founder-role">Medical Laboratory Technologist</span>
+
+                            <div class="founder-expertise">
+                                <h4>Expertise & Qualifications</h4>
+                                <ul>
+                                    <li>
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M9 12l2 2 4-4"/>
+                                            <circle cx="12" cy="12" r="10"/>
+                                        </svg>
+                                        Specialized in Hematology and general medical laboratory science
+                                    </li>
+                                    <li>
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M9 12l2 2 4-4"/>
+                                            <circle cx="12" cy="12" r="10"/>
+                                        </svg>
+                                        Expert knowledge of blood-borne pathogens and contamination risks
+                                    </li>
+                                    <li>
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M9 12l2 2 4-4"/>
+                                            <circle cx="12" cy="12" r="10"/>
+                                        </svg>
+                                        Trained in identifying infectious materials and proper specimen handling
+                                    </li>
+                                    <li>
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M9 12l2 2 4-4"/>
+                                            <circle cx="12" cy="12" r="10"/>
+                                        </svg>
+                                        Deep understanding of waste streams from laboratories, wards, and clinical settings
+                                    </li>
+                                    <li>
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M9 12l2 2 4-4"/>
+                                            <circle cx="12" cy="12" r="10"/>
+                                        </svg>
+                                        Training capability to educate cooperative members and facility staff
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <blockquote class="founder-quote">
+                                "As a Medical Laboratory Technologist, I've witnessed firsthand the dangers of improper healthcare waste management. CleanHealth is my commitment to protecting communities while creating opportunities for women."
+                            </blockquote>
+                        </div>
+                    </div>
+
+                    <!-- Team Growth -->
+                    <div class="team-growth">
+                        <h3>Our Growing Team</h3>
+                        <div class="growth-visual" id="team-growth-chart"></div>
+                        <div class="growth-stats">
+                            <div class="growth-stat">
+                                <span class="stat-year">Year 1</span>
+                                <span class="stat-count">8 Members</span>
+                            </div>
+                            <div class="growth-stat">
+                                <span class="stat-year">Year 2</span>
+                                <span class="stat-count">12 Members</span>
+                            </div>
+                            <div class="growth-stat">
+                                <span class="stat-year">Year 3</span>
+                                <span class="stat-count">15 Members</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section contact" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Get In Touch</span>
+                    <h2 class="section-title">Partner With Us Today</h2>
+                    <p class="section-description">
+                        Ready to achieve NEMA compliance while supporting women's empowerment?
+                        Let's discuss how we can serve your facility.
+                    </p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </div>
+                            <div class="info-content">
+                                <h4>Location</h4>
+                                <p>Kampala, Uganda</p>
+                                <span>Serving Kampala Central, Wakiso, and Mukono districts</span>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <path d="M22 6l-10 7L2 6"/>
+                                </svg>
+                            </div>
+                            <div class="info-content">
+                                <h4>Email</h4>
+                                <p>info@cleanhealthwaste.org</p>
+                                <span>We respond within 24 hours</span>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                                </svg>
+                            </div>
+                            <div class="info-content">
+                                <h4>Phone</h4>
+                                <p>+256 XXX XXX XXX</p>
+                                <span>Monday - Saturday, 6AM - 5PM</span>
+                            </div>
+                        </div>
+
+                        <div class="certification-badges">
+                            <h4>Working Towards</h4>
+                            <div class="badges">
+                                <div class="badge">
+                                    <svg viewBox="0 0 48 48" fill="none">
+                                        <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2"/>
+                                        <path d="M24 14v10l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>
+                                    <span>NEMA Certified</span>
+                                </div>
+                                <div class="badge">
+                                    <svg viewBox="0 0 48 48" fill="none">
+                                        <path d="M24 4l6 12 13 2-9 9 2 13-12-6-12 6 2-13-9-9 13-2z" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                    <span>Cooperative Registered</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <form class="contact-form" id="contact-form" novalidate>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Full Name *</label>
+                                    <input type="text" id="name" name="name" required
+                                           placeholder="Your full name" autocomplete="name">
+                                    <span class="error-message"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required
+                                           placeholder="you@example.com" autocomplete="email">
+                                    <span class="error-message"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone"
+                                           placeholder="+256 XXX XXX XXX" autocomplete="tel">
+                                    <span class="error-message"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="facility">Facility Name</label>
+                                    <input type="text" id="facility" name="facility"
+                                           placeholder="Your healthcare facility">
+                                    <span class="error-message"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="service">Service Interest *</label>
+                                <select id="service" name="service" required>
+                                    <option value="">Select a service</option>
+                                    <option value="collection">Facility Service Contract</option>
+                                    <option value="training">Training Programs</option>
+                                    <option value="recycling">Recycling Linkage</option>
+                                    <option value="consultation">Free Consultation</option>
+                                    <option value="partnership">Partnership Inquiry</option>
+                                </select>
+                                <span class="error-message"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="4" required
+                                          placeholder="Tell us about your facility and waste management needs..."></textarea>
+                                <span class="error-message"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                <span>Send Message</span>
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                                </svg>
+                            </button>
+
+                            <div class="form-status" id="form-status" aria-live="polite"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Join the Movement for Clean Healthcare</h2>
+                    <p>Together, we can protect Uganda's environment while empowering women through dignified employment.</p>
+                    <div class="cta-buttons">
+                        <a href="#contact" class="btn btn-primary btn-large">
+                            <span>Become a Partner Facility</span>
+                        </a>
+                        <a href="#services" class="btn btn-outline btn-large">
+                            <span>View Our Services</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <svg class="logo-icon" viewBox="0 0 50 50" aria-hidden="true">
+                            <circle cx="25" cy="25" r="23" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <path d="M15 25 L22 32 L35 18" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="25" cy="25" r="8" fill="currentColor" opacity="0.2"/>
+                        </svg>
+                        <span>CleanHealth</span>
+                    </a>
+                    <p>Empowering women through professional healthcare waste management in Uganda.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Twitter" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 2a2 2 0 110 4 2 2 0 010-4z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#problem">The Crisis</a></li>
+                        <li><a href="#solution">Our Solution</a></li>
+                        <li><a href="#impact">Impact</a></li>
+                        <li><a href="#services">Services</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Waste Collection</a></li>
+                        <li><a href="#services">Staff Training</a></li>
+                        <li><a href="#services">Recycling Linkage</a></li>
+                        <li><a href="#contact">Free Consultation</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>Kampala, Uganda</p>
+                    <p>info@cleanhealthwaste.org</p>
+                    <p>+256 XXX XXX XXX</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 CleanHealth Waste Women's Cooperative. All rights reserved.</p>
+                <p class="footer-tagline">Women-Led | Community-Based | Environmentally Responsible</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/visualizations.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/ml-model.js"></script>
+</body>
+</html>

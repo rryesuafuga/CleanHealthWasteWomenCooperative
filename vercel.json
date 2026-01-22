@@ -1,6 +1,8 @@
 {
   "version": 2,
   "name": "cleanhealth-waste-cooperative",
+  "buildCommand": "",
+  "outputDirectory": ".",
   "headers": [
     {
       "source": "/(.*)",

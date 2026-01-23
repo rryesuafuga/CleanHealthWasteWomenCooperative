@@ -2140,21 +2140,13 @@ a:hover {
 }
 
 /* ============================================
-   Animations
+   Animations - Content visible by default
    ============================================ */
-.animate-fade-up {
-    opacity: 0;
-    transform: translateY(30px);
-}
-
-.animate-fade-left {
-    opacity: 0;
-    transform: translateX(30px);
-}
-
+.animate-fade-up,
+.animate-fade-left,
 .animate-fade-right {
-    opacity: 0;
-    transform: translateX(-30px);
+    opacity: 1;
+    transform: none;
 }
 
 /* ============================================

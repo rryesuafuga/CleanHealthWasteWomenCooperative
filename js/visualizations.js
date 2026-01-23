@@ -444,7 +444,7 @@
         ];
 
         const { width: containerWidth, height: containerHeight } = getContainerDimensions(containerId);
-        const margin = { top: 20, right: 30, bottom: 40, left: 140 };
+        const margin = { top: 20, right: 60, bottom: 40, left: 180 };
         const width = containerWidth - margin.left - margin.right;
         const height = containerHeight - margin.top - margin.bottom;
 
@@ -466,7 +466,8 @@
                     label: impact.label,
                     value: impact.value,
                     color: cat.color,
-                    groupIndex: i
+                    groupIndex: i,
+                    isFirst: j === 0
                 });
             });
         });
@@ -495,23 +496,7 @@
 
         g.select('.grid .domain').remove();
 
-        // Category separators and labels
-        let currentCategory = '';
-        flatData.forEach((d, i) => {
-            if (d.category !== currentCategory) {
-                currentCategory = d.category;
-                const yPos = y(d.label) - y.bandwidth() * 0.3;
-
-                // Category label on left
-                g.append('text')
-                    .attr('x', -135)
-                    .attr('y', yPos + y.bandwidth())
-                    .attr('font-size', '13px')
-                    .attr('font-weight', '700')
-                    .attr('fill', d.color)
-                    .text(d.category);
-            }
-        });
+        // No separate category labels - using colored bars instead
 
         // Bars
         const bars = g.selectAll('.bar')
@@ -544,7 +529,7 @@
 
         // Labels
         bars.append('text')
-            .attr('x', -5)
+            .attr('x', -10)
             .attr('y', d => y(d.label) + y.bandwidth() / 2)
             .attr('dy', '0.35em')
             .attr('text-anchor', 'end')
